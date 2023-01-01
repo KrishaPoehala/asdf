@@ -2,16 +2,16 @@
 using Microsoft.AspNetCore.SignalR;
 using Microsoft.EntityFrameworkCore;
 using reenbitChat.BLL.Hubs;
-using reenbitChat.BLL.Services.Abstraction;
 using reenbitChat.Common.Dtos.MessageDtos;
 using reenbitChat.DAL.Context;
 using reenbitChat.DAL.Entities;
+using reenbitChat.Domain.Services;
 
-namespace reenbitChat.BLL.Services.Implementation;
+namespace reenbitChat.BLL.Services;
 
-public class MessageService : BaseService, IMessageService
+public class MessageService : ServiceBase, IMessageService
 {
-    public MessageService(ChatContext context, IMapper mapper, IHubContext<ChatHub> hub) : base(context, mapper, hub)
+    public MessageService(ChatContext context, IHubContext<ChatHub> hub, IMapper mapper) : base(context, hub, mapper)
     {
     }
 
@@ -40,7 +40,7 @@ public class MessageService : BaseService, IMessageService
     public async Task EditMessage(EditMessageDto dto)
     {
         var messageToEdit = await _context.Messages
-            .FirstAsync(x => x.Id == dto.MessageId);
+           .FirstAsync(x => x.Id == dto.MessageId);
 
         messageToEdit.Text = dto.EditedText;
         await _context.SaveChangesAsync();

@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using reenbitChat.BLL.Services.Abstraction;
 using reenbitChat.Common.Dtos.MessageDtos;
+using reenbitChat.Domain.Services;
 
 namespace reenbitChat.WebApi.Controllers
 {
@@ -18,7 +18,7 @@ namespace reenbitChat.WebApi.Controllers
 
         [HttpPost]
         [Route("send")]
-        public async Task<ActionResult> SendMessage(NewMessageDto dto)
+        public async Task<IActionResult> SendMessage(NewMessageDto dto)
         {
             await _messageService.SendMessage(dto);
             return Ok();
@@ -26,7 +26,7 @@ namespace reenbitChat.WebApi.Controllers
 
         [HttpPut]
         [Route("edit")]
-        public async Task<ActionResult> EditMessage(EditMessageDto dto)
+        public async Task<IActionResult> EditMessage(EditMessageDto dto)
         {
             await _messageService.EditMessage(dto);
             return Ok();
@@ -34,7 +34,7 @@ namespace reenbitChat.WebApi.Controllers
 
         [HttpDelete]
         [Route("delete/{id}/{isDeleteOnlyForSender}")]
-        public async Task<ActionResult> DeleteMessage(int id, bool isDeleteOnlyForSender)
+        public async Task<IActionResult> DeleteMessage(int id, bool isDeleteOnlyForSender)
         {
             await _messageService.DeleteMessage(id, isDeleteOnlyForSender);
             return Ok();

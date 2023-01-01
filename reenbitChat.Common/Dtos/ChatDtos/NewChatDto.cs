@@ -1,7 +1,10 @@
-﻿namespace reenbitChat.Common.Dtos.ChatDtos;
+﻿using reenbitChat.Common.Dtos.UserDtos;
+
+namespace reenbitChat.Common.Dtos.ChatDtos;
 
 public class NewChatDto
 {
-    public int FirstUserId { get; set; }
-    public int SecondUserId { get; set; }
+    public string Name { get; set; }
+    public IEnumerable<UserDto> Members { get; set; }
+    public bool? IsGroup { get; set; }
 }

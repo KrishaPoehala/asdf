@@ -1,6 +1,6 @@
 ﻿using reenbitChat.Common.Dtos.MessageDtos;
 
-namespace reenbitChat.BLL.Services.Abstraction;
+namespace reenbitChat.Domain.Services;
 
 
 public interface IMessageService

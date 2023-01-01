@@ -71,7 +71,7 @@ public static class ModelBuilderExtentions
             .RuleFor(x => x.Text, f => f.Lorem.Sentences(2))
             .RuleFor(x => x.ChatId, f => f.PickRandom(groups).Id)
             .RuleFor(x => x.SenderId, f => f.PickRandom(users).Id)
-            .RuleFor(x => x.SentAt, f => f.Date.Future())
+            .RuleFor(x => x.SentAt, f => f.Date.Past())
             .RuleFor(x => x.Id, f => index++);
 
         return faker.Generate(count);
@@ -81,7 +81,7 @@ public static class ModelBuilderExtentions
     {
         var index = 1;
         var faker = new Faker<User>()
-            .RuleFor(x => x.Email, f => f.Internet.Email())
+            .RuleFor(x => x.NormalizedEmail, f => f.Internet.Email())
             .RuleFor(x => x.Name, f => f.Name.FirstName())
             .RuleFor(x => x.ProfilePhotoUrl, f=> f.Image.PicsumUrl(480))
             .RuleFor(x => x.Id, f => index++);

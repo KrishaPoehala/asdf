@@ -8,11 +8,13 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.SignalR.Core" Version="1.1.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.25.1" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\reenbitChat.Common\reenbitChat.Common.csproj" />
     <ProjectReference Include="..\reenbitChat.DAL\reenbitChat.DAL.csproj" />
+    <ProjectReference Include="..\reenbitChat.Domain\reenbitChat.Domain.csproj" />
   </ItemGroup>
 
 </Project>

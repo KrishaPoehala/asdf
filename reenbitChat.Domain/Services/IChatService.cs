@@ -4,12 +4,14 @@ using reenbitChat.Common.Dtos.UserDtos;
 using reenbitChat.DAL.Context;
 using reenbitChat.DAL.Entities;
 
-namespace reenbitChat.BLL.Services.Abstraction;
+namespace reenbitChat.Domain.Services;
 
 public interface IChatService
 {
     Task<UserDto> GetRandomUser();
-    IAsyncEnumerable<ChatDto> GetUserChats(int userId);
-    Task<IEnumerable<MessageDto>> GetChatMessages(int chatId,int userId,
+    IEnumerable<ChatDto> GetUserChats(int userId);
+    Task<IEnumerable<MessageDto>> GetChatMessages(int chatId, int userId,
         int pageNumber, int messagesInPage);
+
+    Task<ChatDto> CreateChat(NewChatDto dto);
 }

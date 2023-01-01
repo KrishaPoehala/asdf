@@ -3,18 +3,18 @@ using Microsoft.AspNetCore.SignalR;
 using reenbitChat.BLL.Hubs;
 using reenbitChat.DAL.Context;
 
-namespace reenbitChat.BLL.Services.Abstraction;
+namespace reenbitChat.BLL.Services;
 
-public abstract class BaseService
+public abstract class ServiceBase
 {
     protected readonly ChatContext _context;
-    protected readonly IMapper _mapper;
     protected readonly IHubContext<ChatHub> _hub;
+    protected readonly IMapper _mapper;
 
-    protected BaseService(ChatContext context, IMapper mapper, IHubContext<ChatHub> hub)
+    protected ServiceBase(ChatContext context, IHubContext<ChatHub> hub, IMapper mapper)
     {
         _context = context;
-        _mapper = mapper;
         _hub = hub;
+        _mapper = mapper;
     }
 }

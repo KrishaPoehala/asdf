@@ -5,11 +5,13 @@ VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "reenbitChat.WebApi", "reenbitChat.WebApi\reenbitChat.WebApi.csproj", "{C8F457FE-722D-45E3-A622-ECBE4F5B76BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "reenbitChat.DAL", "reenbitChat.DAL\reenbitChat.DAL.csproj", "{B986BE60-EAA4-4817-91AF-FBDBD00DCD9A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "reenbitChat.DAL", "reenbitChat.DAL\reenbitChat.DAL.csproj", "{B986BE60-EAA4-4817-91AF-FBDBD00DCD9A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "reenbitChat.Common", "reenbitChat.Common\reenbitChat.Common.csproj", "{48A35AFA-21EE-4B96-9775-77B6F73D518C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "reenbitChat.Common", "reenbitChat.Common\reenbitChat.Common.csproj", "{48A35AFA-21EE-4B96-9775-77B6F73D518C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "reenbitChat.BLL", "reenbitChat.BLL\reenbitChat.BLL.csproj", "{E431EC8D-8842-420C-921D-A30CF44DD7EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "reenbitChat.BLL", "reenbitChat.BLL\reenbitChat.BLL.csproj", "{E431EC8D-8842-420C-921D-A30CF44DD7EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "reenbitChat.Domain", "reenbitChat.Domain\reenbitChat.Domain.csproj", "{3210749F-41A9-44AA-A351-6EFF6BD238C4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{E431EC8D-8842-420C-921D-A30CF44DD7EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E431EC8D-8842-420C-921D-A30CF44DD7EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E431EC8D-8842-420C-921D-A30CF44DD7EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3210749F-41A9-44AA-A351-6EFF6BD238C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3210749F-41A9-44AA-A351-6EFF6BD238C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3210749F-41A9-44AA-A351-6EFF6BD238C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3210749F-41A9-44AA-A351-6EFF6BD238C4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
